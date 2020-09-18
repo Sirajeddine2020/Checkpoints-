@@ -1,0 +1,26 @@
+ALGORITHM sentence
+VAR
+    s: STRING := "";
+    c: CHAR;
+    l, w, v : INTEGER;
+BEGIN
+l:=0 ; w:=0; v:=0;
+
+REPEAT
+    Read (c) ; 
+    IF (c ='a' or c ='e' or c ='i' or c ='o' or c ='u' or c ='y') THEN
+        v:= v +1;
+    ELSE_IF (c = ' ') THEN
+        w:= w +1;   
+    END_IF 
+    s:= s + c ; //concatination
+    l:= l+1 ;
+
+UNTIL (c = '.') //last caracter must be a point and a sentence contains only one point
+
+    writeln (s);
+    writeln ('length of this sentence is:' , l );
+    writeln ('number of words is:' , w );
+    writeln ('number of voyels is:' , v );
+    
+END
