@@ -1,4 +1,4 @@
-ALGORITHM linear1
+ALGORITHM linear4
 //Problem2 , solution2
 VAR
    // declaring hash table
