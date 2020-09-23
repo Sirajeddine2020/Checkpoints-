@@ -1,0 +1,20 @@
+ALGORITHM linear3
+//Problem2 , solution1
+VAR
+    T, W:  ARRAY_OF INTEGER[100];
+    i, j:=0, sum:=0 : INTEGER;
+    
+
+BEGIN
+    FOR i FROM 0 TO T.length -1 STEP 1  DO
+        WHILE (j < W.length )  DO
+            IF ( W[j] = T[i] ) THEN
+             sum:= sum + 2* T[i] 
+        
+            END_IF
+            j:= j +1;    
+        END_WHILE
+    END_FOR
+
+    Writeln (sum);
+END

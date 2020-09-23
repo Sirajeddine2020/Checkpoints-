@@ -1,0 +1,23 @@
+ALGORITHM linear1
+//Problem1 , solution1
+VAR
+    T, W: ARRAY_OF INTEGER[100];
+    i, j, sum:=0 : INTEGER;
+    
+
+BEGIN
+    FOR i FROM 0 TO T.length -1 STEP 1  DO
+        FOR j FROM 0 TO W.length-1 STEP 1  DO
+            IF ( W[j] = T[i] ) THEN 
+             T[i] :=0; 
+             W[j] :=0;
+            END_IF
+        END_FOR       
+    END_FOR
+    FOR i FROM 0 TO T.length -1 STEP 1  DO
+        FOR j FROM 0 TO W.length -1 STEP 1  DO
+         sum:= sum   + T[i] + W[j];
+        END_FOR
+    END_FOR
+    Writeln (sum);
+END
