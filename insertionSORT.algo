@@ -1,0 +1,18 @@
+ALGORITHM INSERTION_SORT
+VAR
+    arr: ARRAY_OF INTEGER;
+    i,j,x: INTEGER;
+BEGIN
+    FOR i FROM 0 TO arr.length-1 STEP 1  DO
+        // mémoriser arr[i] dans x
+            x := arr[i];
+        //décaler vers la droite les éléments de arr[0]..arr[i-1] qui sont plus grands que x en partant de arr[i-1]
+            j:=i;
+            WHILE (j > 0 AND arr[j-1] > x) DO
+                arr[j] := arr[j - 1]     
+                j := j - 1;
+            END_WHILE
+        //placer x dans le "trou" laissé par le décalage
+            arr[j] := x;     
+    END_FOR  ;
+END
